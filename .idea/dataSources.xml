@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3930800045">
+    <data-source source="LOCAL" name="Rails invitations: development" uuid="6955e943-9cfa-4e36-89bd-9aa98015a361">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:invitations_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails invitations: test" uuid="752505a1-d00d-4edf-87a9-bb94650961cf">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:invitations_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails invitations: production" uuid="be34a222-e011-45d5-b96a-6b5494a12973">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:invitations_production</jdbc-url>
+      <user-name>invitations</user-name>
+      <user-password>df96df8fdf97df8adfefdfe4dffcdff1df8ddfe3dfe4dffcdfe3dffedfebdffedfe3dfe5dfe4dff9dff5dfeedfebdffedfebdfe8dfebdff9dfefdff5dffadfebdff9dff9dffddfe5dff8dfeedf8ddff7df8adf8fdf94</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
