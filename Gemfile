@@ -25,6 +25,7 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'capybara'
   gem 'capybara-webkit'
+  gem 'rspec-given'
   gem 'database_cleaner'
   gem 'rails_dt'
   gem 'factory_girl_rails'
