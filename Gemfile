@@ -15,7 +15,21 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'haml-rails'
+gem 'bootstrap-sass-rails', '~> 3.1.0'
+gem 'devise', '~> 3.2.4'
+gem 'inherited_resources'
+gem 'simple_form'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.14'
+  gem 'shoulda-matchers', require: false
+  gem 'capybara'
+  gem 'capybara-webkit'
+  gem 'database_cleaner'
+  gem 'rails_dt'
+  gem 'factory_girl_rails'
+  gem 'faker'
+end
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -28,10 +42,6 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
-
-group :development, :test do
-
-end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
