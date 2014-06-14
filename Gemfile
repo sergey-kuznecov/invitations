@@ -30,6 +30,7 @@ group :development, :test do
   gem 'rails_dt'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'launchy'
 end
 
 # Use jquery as the JavaScript library

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Devise::RegistrationsController do
 
-  Given {  @request.env['devise.mapping'] = Devise.mappings[:user] }
+  Given { @request.env['devise.mapping'] = Devise.mappings[:user] }
 
   describe 'PUT #update' do
     Given { @user = create :user, phone: nil }
