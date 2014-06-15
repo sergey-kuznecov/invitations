@@ -1,0 +1,7 @@
+.row
+  .col-xs-4.col-md-offset-3
+    %h4 Send new invitation
+    = simple_form_for [:admin, resource], defaults: { input_html: { class: 'form-control' } } do |f|
+      = f.input :invitation_email
+
+      = f.submit 'Send Invitation', class: 'btn btn-success'

@@ -19,6 +19,7 @@ gem 'bootstrap-sass-rails', '~> 3.1.0'
 gem 'devise', '~> 3.2.4'
 gem 'inherited_resources'
 gem 'simple_form'
+gem 'valid_email'
 
 group :development, :test do
   gem 'rspec-rails', '~> 2.14'
