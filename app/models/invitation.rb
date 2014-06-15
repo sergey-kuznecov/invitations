@@ -7,6 +7,6 @@ class Invitation < ActiveRecord::Base
   private
 
   def generate_token
-    self.token = SecureRandom.hex(16)
+    self.token = SecureRandom.hex(16) unless token.present?
   end
 end

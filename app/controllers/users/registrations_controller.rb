@@ -1,11 +1,9 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   before_filter :set_invitation_token, only: :new
-  before_filter :get_current_invitation, only: [:new, :create]
 
   def new
-    if @current_invitation
-      build_resource(sign_up_params)
-      respond_with self.resource
+    if get_current_invitation
+      super
     else
       flash[:danger] = 'In order to register, you should get an invitation!'
       redirect_to root_path
@@ -15,6 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     build_resource(sign_up_params)
     if resource.save
+      get_current_invitation.destroy
       yield resource if block_given?
       if resource.active_for_authentication?
         set_flash_message :notice, :signed_up if is_flashing_format?
@@ -31,7 +30,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     end
   end
 
-
   private
 
   def set_invitation_token
@@ -39,6 +37,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def get_current_invitation
-    @current_invitation ||= Invitation.where(token: session[:token]).first
+    Invitation.where(token: session[:token]).first
   end
 end
