@@ -71,4 +71,22 @@ describe 'User' do
     And  { page.should have_link 'Profile' }
   end
 
+  describe 'should see notification' do
+    context 'if phone number is not empty' do
+      Given { @user = create :user, :with_phone }
+      When  { login_as_user(@user) }
+      When { visit root_path }
+
+      Then { page.should_not have_content 'Please enter the phone number in your profile!' }
+    end
+
+    context 'if phone number is empty' do
+      Given { @user = create :user, phone: nil }
+      When { login_as_user(@user) }
+      When { visit root_path }
+
+      Then { page.should have_content 'Please enter the phone number in your profile!' }
+
+    end
+  end
 end
